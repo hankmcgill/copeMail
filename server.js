@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 const auth = require('./controllers/authController')
-
 app.use(express.json())
 
 // main GET route handler for possible front end
