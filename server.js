@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const PORT = 3000
+
 const auth = require('./controllers/authController')
+const email = require('./controllers/emailController')
 app.use(express.json())
 
 // main GET route handler for possible front end
@@ -10,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 // route handler for email signup/auth/etc
-app.use('/email', auth.checkIfValidEmail, auth.checkIfAcctExists, (req, res) => {
+app.use('/email', auth.checkIfValidEmail, auth.checkIfAcctExists, email.sendEmails, (req, res) => {
   return res.status(200).json('email successfully registered')
 })
 

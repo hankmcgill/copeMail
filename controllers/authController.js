@@ -16,6 +16,22 @@ module.exports = {
     else {
       // if not taken, can be used for a new acct (value set to current date to simulate values stored in a DB)
       storedUsers[req.body.email] = Date.now()
+
+      // here I'm creating a new closure for each new acct with associated messages to handle edge cases (as I feel these would most likely
+      // also be stored in a database)
+      storedUsers[req.body.email.messages] = {
+        'Hang in there': true,
+        "You're doing great!": true,
+        "You've made it this far!": true,
+        'I believe in you!': true,
+        'We all have tough days': true,
+        'You got this': true,
+        "Think of how far you've come so far!": true,
+        "I bet the little kid version of you would be very impressed with how far you've come": true,
+        'If you can dream it, you can do it': true,
+        "You are almost there - don't stop digging": true
+      }
+
       return next()
     }
   }
