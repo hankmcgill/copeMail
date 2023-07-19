@@ -30,4 +30,9 @@ Only correctly formatted email addresses will be validated.
 Only correctly formatted email addresses will be validated.
 ![Screen Shot 2023-07-18 at 8 05 57 PM](https://github.com/hankmcgill/copeMail/assets/97624308/38b3b296-9a37-4f25-becc-e1388d2374fc)
 
+### Track randomized messages
+Upon entry of a new validly formatted email address, you will see each of 10 messages get sent at a one minute interval as an "email" to the user in the console, followed by a message acknowledging that this process has concluded.
 
+`Note`: in Postman, try entering a second valid email address within the ten second time frame - you will see that the two users are all sent all ten messages asynchronously - and that if you try and use an invalid entry during the send process, it will not affect the valid users.
+
+`If you would like to test the asynchonous sending of messages to multiple destinations, try setting the send interval to a lower rate like 1000ms!`
