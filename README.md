@@ -35,4 +35,8 @@ Upon entry of a new validly formatted email address, you will see each of 10 mes
 
 `Note`: in Postman, try entering a second valid email address within the ten second time frame - you will see that the two users are all sent all ten messages asynchronously - and that if you try and use an invalid entry during the send process, it will not affect the valid users.
 
+![Screen Shot 2023-07-19 at 1 24 20 PM](https://github.com/hankmcgill/copeMail/assets/97624308/23009b2e-2b2d-4054-b63e-d73c92d76cb5)
+
 `If you would like to test the asynchonous sending of messages to multiple destinations, try setting the send interval to a lower rate like 1000ms!`
+
+#### Thank you!
