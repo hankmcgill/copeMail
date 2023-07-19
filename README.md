@@ -15,7 +15,7 @@ Now you're good to go!
 If you haven't yet, please install [Postman](https://www.postman.com/).
 
 ### Initialize new email account
-To test if an email address is valid, send it in the JSON body of a POST request using Postman, like so:
+To test if an email address is valid, send it as the value for the key "email" in the JSON body of a POST request using Postman, like so:
 
 ```
 {
