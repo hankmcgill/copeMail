@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 // route handler for email signup/auth/etc
-app.use('/email', auth.checkIfValidEmail, (req, res) => {
+app.use('/email', auth.checkIfValidEmail, auth.checkIfAcctExists, (req, res) => {
   return res.status(200).json('email successfully registered')
 })
 
