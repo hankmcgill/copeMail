@@ -22,4 +22,7 @@ To test if an email address is valid, send it in the JSON body of a POST request
     "email": "test123@gmail.com"
 }
 ```
-Only correctly formatted email addresses will be validated.
+Only correctly formatted email addresses will be validated.  
+
+`Note`: Validator will also check if the same email address has been used twice (in memory)!
+
